@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Episode } from '../model/episode';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,10 @@ import { Episode } from '../model/episode';
 export class EpisodeService {
   private episodesUrl = 'api/episodes';
   constructor(private httpsClient: HttpClient) { }
-  getEpisodes() {
-    this.httpsClient.get<Episode[]>(this.episodesUrl);
+  getEpisodes(): Observable<Episode[]>  {
+    return this.httpsClient.get<Episode[]>(this.episodesUrl);
   }
-  getEpisode(id: number) {
-    this.httpsClient.get<Episode>(`${this.episodesUrl}/?id=${id}`);
+  getEpisode(id: number): Observable<Episode> {
+    return this.httpsClient.get<Episode>(`${this.episodesUrl}/${id}`);
   }
 }

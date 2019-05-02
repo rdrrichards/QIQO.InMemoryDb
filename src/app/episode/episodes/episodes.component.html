@@ -1,3 +1,5 @@
-<p>
-  episodes works!
-</p>
+<div *ngIf="episodes.length > 0">
+  <div *ngFor="let episode of episodes">
+    {{episode.id}} {{episode.name}}
+  </div>
+</div>
