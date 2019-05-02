@@ -1,0 +1,5 @@
+<div *ngIf="movies.length > 0">
+  <div *ngFor="let movie of movies">
+    {{movie.id}} {{movie.name}} <a [routerLink]="['/movies', movie.id]">View</a>
+  </div>
+</div>
