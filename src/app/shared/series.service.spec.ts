@@ -20,7 +20,7 @@ describe('SeriesService', () => {
       expect(service).toBeTruthy();
   })));
 
-  it(`should create`, async(inject([SeriesService, HttpTestingController],
+  it(`getSeriesEpisodes should be truthy`, async(inject([SeriesService, HttpTestingController],
     (service: SeriesService, httpClient: HttpTestingController) => {
       expect(service.getSeriesEpisodes(1)).toBeTruthy();
   })));
