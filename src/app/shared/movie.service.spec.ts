@@ -1,12 +1,22 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async, inject } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { MovieService } from './movie.service';
 
 describe('MovieService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
-
-  it('should be created', () => {
-    const service: MovieService = TestBed.get(MovieService);
-    expect(service).toBeTruthy();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ HttpClientTestingModule ],
+      providers: [ MovieService ]
+    });
   });
+
+  afterEach(inject([HttpTestingController], (httpClient: HttpTestingController) => {
+    httpClient.verify();
+  }));
+
+  it(`should create`, async(inject([MovieService, HttpTestingController],
+    (service: MovieService, httpClient: HttpTestingController) => {
+      expect(service).toBeTruthy();
+  })));
 });

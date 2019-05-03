@@ -9,4 +9,8 @@ describe('InMemoryDataService', () => {
     const service: InMemoryDataService = TestBed.get(InMemoryDataService);
     expect(service).toBeTruthy();
   });
+  it('createDb should be truthy', () => {
+    const service: InMemoryDataService = TestBed.get(InMemoryDataService);
+    expect(service.createDb()).toBeTruthy();
+  });
 });

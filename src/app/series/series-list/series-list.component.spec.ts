@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { SeriesListComponent } from './series-list.component';
 
@@ -8,7 +9,8 @@ describe('SeriesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SeriesListComponent ]
+      declarations: [ SeriesListComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   }));
@@ -21,5 +23,17 @@ describe('SeriesListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('getSeriesEpisodes should be truthy', () => {
+    expect(component.getSeriesEpisodes()).toBeUndefined();
+  });
+
+  it('viewEpisodes should be truthy', () => {
+    expect(component.viewEpisodes(1)).toBeUndefined();
+  });
+
+  it('viewEpisodes should be truthy', () => {
+    expect(component.ngOnInit()).toBeUndefined();
   });
 });
