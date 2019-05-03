@@ -7,21 +7,24 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   constructor() { }
   createDb() {
+    const series = [
+      { id: 1, name: 'Firefly' }
+    ];
     const episodes = [
-      { id: 1, name: 'Serentiy' },
-      { id: 2, name: 'The Train Job' },
-      { id: 3, name: 'Bushwhacked' },
-      { id: 4, name: 'Shindig' },
-      { id: 5, name: 'Safe' },
-      { id: 6, name: 'Our Misses Reynolds' },
-      { id: 7, name: 'Jaynestown' },
-      { id: 8, name: 'Out of Gas' },
-      { id: 9, name: 'Ariel' },
-      { id: 10, name: 'War Stories' },
-      { id: 11, name: 'Trash' },
-      { id: 12, name: 'The Message' },
-      { id: 13, name: 'Heart of Gold' },
-      { id: 14, name: 'Objects in Space' }
+      { id: 1, name: 'Serenity', seriesId: 1 },
+      { id: 2, name: 'The Train Job', seriesId: 1 },
+      { id: 3, name: 'Bushwhacked', seriesId: 1 },
+      { id: 4, name: 'Shindig', seriesId: 1 },
+      { id: 5, name: 'Safe', seriesId: 1 },
+      { id: 6, name: 'Our Misses Reynolds', seriesId: 1 },
+      { id: 7, name: 'Jaynestown', seriesId: 1 },
+      { id: 8, name: 'Out of Gas', seriesId: 1 },
+      { id: 9, name: 'Ariel', seriesId: 1 },
+      { id: 10, name: 'War Stories', seriesId: 1 },
+      { id: 11, name: 'Trash', seriesId: 1 },
+      { id: 12, name: 'The Message', seriesId: 1 },
+      { id: 13, name: 'Heart of Gold', seriesId: 1 },
+      { id: 14, name: 'Objects in Space', seriesId: 1 }
     ];
     const movies = [
       { id: 1, name: 'A New Hope' },
@@ -39,6 +42,6 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'Star Trek: The Return Home' },
       { id: 14, name: 'Star Trek: The Final Frontier' }
     ];
-    return { episodes, movies };
+    return { series, episodes, movies };
   }
 }
