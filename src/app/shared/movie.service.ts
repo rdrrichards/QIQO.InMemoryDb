@@ -7,12 +7,12 @@ import { Movie } from '../model/movie';
   providedIn: 'root'
 })
 export class MovieService {
-  private episodesUrl = 'api/movies';
+  private moviesUrl = 'api/movies';
   constructor(private httpsClient: HttpClient) { }
   getMovies(): Observable<Movie[]>  {
-    return this.httpsClient.get<Movie[]>(this.episodesUrl);
+    return this.httpsClient.get<Movie[]>(this.moviesUrl);
   }
   getMovie(id: number): Observable<Movie> {
-    return this.httpsClient.get<Movie>(`${this.episodesUrl}/${id}`);
+    return this.httpsClient.get<Movie>(`${this.moviesUrl}/${id}`);
   }
 }
