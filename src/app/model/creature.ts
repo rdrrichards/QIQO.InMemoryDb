@@ -1,4 +1,4 @@
-export class Creature {
+export interface Creature {
   id: string;
   description: string;
   strength: number;
