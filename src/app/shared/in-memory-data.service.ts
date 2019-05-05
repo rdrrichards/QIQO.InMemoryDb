@@ -42,6 +42,94 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'Star Trek: The Return Home' },
       { id: 14, name: 'Star Trek: The Final Frontier' }
     ];
-    return { series, episodes, movies };
+    const spells = [
+      {
+        id: 'summonnaturesally1',
+        description: 'Summon Nature\'s Ally I',
+        group: 'summonnaturesally',
+        level: 1,
+        classes: ['druid1', 'ranger1', 'shaman1'],
+        creatureList: [
+          'direrat',
+          'dog',
+          'dolphin'
+        ]
+      },
+      {
+        id: 'summonnaturesally2',
+        description: 'Summon Nature\'s Ally II',
+        group: 'summonnaturesally',
+        level: 2,
+        classes: ['druid2', 'ranger2', 'shaman2'],
+        creatureList: [
+          'horse',
+          'octopus',
+          'wolf'
+        ]
+      }
+    ];
+    const creatures = [
+      {
+        id: 'direrat',
+        description: 'Dire Rat',
+        strength: 10,
+        dexterity: 17,
+        constitution: 12,
+        intelligence: 2,
+        wisdom: 12,
+        charisma: 4
+      },
+      {
+        id: 'dog',
+        description: 'Dog',
+        strength: 13,
+        dexterity: 13,
+        constitution: 15,
+        intelligence: 2,
+        wisdom: 12,
+        charisma: 6
+      },
+      {
+        id: 'dolphin',
+        description: 'Dolphin',
+        strength: 12,
+        dexterity: 15,
+        constitution: 13,
+        intelligence: 2,
+        wisdom: 12,
+        charisma: 6
+      },
+      {
+        id: 'horse',
+        description: 'Horse',
+        strength: 16,
+        dexterity: 14,
+        constitution: 17,
+        intelligence: 2,
+        wisdom: 13,
+        charisma: 7
+      },
+      {
+        id: 'octopus',
+        description: 'Octopus',
+        strength: 12,
+        dexterity: 17,
+        constitution: 14,
+        intelligence: 2,
+        wisdom: 13,
+        charisma: 3
+      },
+      {
+        id: 'wolf',
+        description: 'Wolf',
+        strength: 13,
+        dexterity: 15,
+        constitution: 15,
+        intelligence: 2,
+        wisdom: 12,
+        charisma: 6
+      }
+    ];
+    return { series, episodes, movies, spells, creatures };
   }
 }
