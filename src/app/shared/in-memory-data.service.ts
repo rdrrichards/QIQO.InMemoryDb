@@ -26,21 +26,34 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'Heart of Gold', seriesId: 1 },
       { id: 14, name: 'Objects in Space', seriesId: 1 }
     ];
+    const franchises = [
+      { id: 1, name: 'Star Wars' },
+      { id: 2, name: 'Star Trek' },
+      { id: 3, name: 'N/A' }
+    ];
     const movies = [
-      { id: 1, name: 'A New Hope' },
-      { id: 2, name: 'The Empire Strikes Back' },
-      { id: 3, name: 'Return of the Jedi' },
-      { id: 4, name: 'Phantom Menace' },
-      { id: 5, name: 'Attack of the Clones' },
-      { id: 6, name: 'Revenge of the Sith' },
-      { id: 7, name: 'Forrest Gump' },
-      { id: 8, name: 'Notting Hill' },
-      { id: 9, name: 'Serenity' },
-      { id: 10, name: 'Star Trek: The Motion Picture' },
-      { id: 11, name: 'Star Trek: The Wrath of Khan' },
-      { id: 12, name: 'Star Trek: In Search of Spock' },
-      { id: 13, name: 'Star Trek: The Return Home' },
-      { id: 14, name: 'Star Trek: The Final Frontier' }
+      { id: 1, name: 'A New Hope', franchiseId: 1 },
+      { id: 2, name: 'The Empire Strikes Back', franchiseId: 1 },
+      { id: 3, name: 'Return of the Jedi', franchiseId: 1 },
+      { id: 4, name: 'Phantom Menace', franchiseId: 1 },
+      { id: 5, name: 'Attack of the Clones', franchiseId: 1 },
+      { id: 6, name: 'Revenge of the Sith', franchiseId: 1 },
+      { id: 7, name: 'Forrest Gump', franchiseId: 3 },
+      { id: 8, name: 'Notting Hill', franchiseId: 3 },
+      { id: 9, name: 'Serenity', franchiseId: 3 },
+      { id: 10, name: 'Star Trek: The Motion Picture', franchiseId: 2 },
+      { id: 11, name: 'Star Trek II: The Wrath of Khan', franchiseId: 2 },
+      { id: 12, name: 'Star Trek III: In Search of Spock', franchiseId: 2 },
+      { id: 13, name: 'Star Trek IV: The Voyage Home', franchiseId: 2 },
+      { id: 14, name: 'Star Trek V: The Final Frontier', franchiseId: 2 },
+      { id: 14, name: 'Star Trek VI: The Undiscovered Country', franchiseId: 2 },
+      { id: 14, name: 'Star Trek Generations', franchiseId: 2 },
+      { id: 14, name: 'Star Trek: First Contact', franchiseId: 2 },
+      { id: 14, name: 'Star Trek: Insurrection', franchiseId: 2 },
+      { id: 14, name: 'Star Trek: Nemesis', franchiseId: 2 },
+      { id: 14, name: 'Star Trek', franchiseId: 2 },
+      { id: 14, name: 'Star Trek Into Darkness', franchiseId: 2 },
+      { id: 14, name: 'Star Trek Beyond', franchiseId: 2 }
     ];
     const spells = [
       {
@@ -130,6 +143,6 @@ export class InMemoryDataService implements InMemoryDbService {
         charisma: 6
       }
     ];
-    return { series, episodes, movies, spells, creatures };
+    return { series, episodes, franchises, movies, spells, creatures };
   }
 }
