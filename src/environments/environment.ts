@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  episodesUrl: 'api/episodes',
+  franchisesUrl: 'api/franchises',
+  moviesUrl: 'api/movies',
+  seriesUrl: 'api/series',
+  spellUrl: 'api/spells',
+  creatureUrl: 'api/creatures'
 };
 
 /*

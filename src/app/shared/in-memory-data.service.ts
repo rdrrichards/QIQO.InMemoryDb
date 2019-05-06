@@ -53,7 +53,9 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 14, name: 'Star Trek: Nemesis', franchiseId: 2 },
       { id: 14, name: 'Star Trek', franchiseId: 2 },
       { id: 14, name: 'Star Trek Into Darkness', franchiseId: 2 },
-      { id: 14, name: 'Star Trek Beyond', franchiseId: 2 }
+      { id: 14, name: 'Star Trek Beyond', franchiseId: 2 },
+      { id: 15, name: 'The Force Awakens', franchiseId: 1 },
+      { id: 66, name: 'THe Last Jedi', franchiseId: 1 }
     ];
     const spells = [
       {
