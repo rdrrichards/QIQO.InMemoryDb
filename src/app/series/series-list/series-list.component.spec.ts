@@ -18,6 +18,7 @@ describe('SeriesListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SeriesListComponent);
     component = fixture.componentInstance;
+    component.series.push({ id: 1, name: 'Test', episodes: [{ id: 1, name: 'Test' }] });
     fixture.detectChanges();
   });
 

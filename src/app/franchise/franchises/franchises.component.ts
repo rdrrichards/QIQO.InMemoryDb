@@ -16,10 +16,10 @@ export class FranchisesComponent implements OnInit {
   ngOnInit() {
     this.franchisesService.getFranchises().subscribe(franchises => {
       this.franchises = franchises;
-      this.getSeriesEpisodes();
+      this.getFranchiseMovies();
     });
   }
-  getSeriesEpisodes() {
+  getFranchiseMovies() {
     this.show = [];
     this.franchises.map(s => {
       const sid = s.id;
