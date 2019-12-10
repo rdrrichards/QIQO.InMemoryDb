@@ -3,11 +3,11 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'episodes', pathMatch: 'full' },
-  { path: 'episodes', loadChildren: './episode/episode.module#EpisodeModule' },
-  { path: 'movies', loadChildren: './movie/movie.module#MovieModule' },
-  { path: 'series', loadChildren: './series/series.module#SeriesModule' },
-  { path: 'spells', loadChildren: './spell/spell.module#SpellModule' },
-  { path: 'franchises', loadChildren: './franchise/franchise.module#FranchiseModule' }
+  { path: 'episodes', loadChildren: () => import('./episode/episode.module').then(m => m.EpisodeModule) },
+  { path: 'movies', loadChildren: () => import('./movie/movie.module').then(m => m.MovieModule) },
+  { path: 'series', loadChildren: () => import('./series/series.module').then(m => m.SeriesModule) },
+  { path: 'spells', loadChildren: () => import('./spell/spell.module').then(m => m.SpellModule) },
+  { path: 'franchises', loadChildren: () => import('./franchise/franchise.module').then(m => m.FranchiseModule) }
 ];
 
 @NgModule({
