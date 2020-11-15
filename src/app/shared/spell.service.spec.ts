@@ -1,4 +1,4 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject, waitForAsync } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { SpellService } from './spell.service';
@@ -15,7 +15,7 @@ describe('SpellService', () => {
     httpClient.verify();
   }));
 
-  it(`should create`, async(inject([SpellService, HttpTestingController],
+  it(`should create`, waitForAsync(inject([SpellService, HttpTestingController],
     (service: SpellService, httpClient: HttpTestingController) => {
       expect(service).toBeTruthy();
   })));

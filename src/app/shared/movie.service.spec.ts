@@ -1,4 +1,4 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject, waitForAsync } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { MovieService } from './movie.service';
@@ -15,7 +15,7 @@ describe('MovieService', () => {
     httpClient.verify();
   }));
 
-  it(`should create`, async(inject([MovieService, HttpTestingController],
+  it(`should create`, waitForAsync(inject([MovieService, HttpTestingController],
     (service: MovieService, httpClient: HttpTestingController) => {
       expect(service).toBeTruthy();
   })));
