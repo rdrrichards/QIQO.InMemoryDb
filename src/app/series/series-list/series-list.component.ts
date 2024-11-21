@@ -3,9 +3,10 @@ import { Series } from 'src/app/model/series';
 import { SeriesService } from 'src/app/shared/series.service';
 
 @Component({
-  selector: 'app-series-list',
-  templateUrl: './series-list.component.html',
-  styleUrls: ['./series-list.component.css']
+    selector: 'app-series-list',
+    templateUrl: './series-list.component.html',
+    styleUrls: ['./series-list.component.css'],
+    standalone: false
 })
 export class SeriesListComponent implements OnInit {
   series: Series[] = [];

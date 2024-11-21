@@ -4,9 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 import { MovieService } from 'src/app/shared/movie.service';
 
 @Component({
-  selector: 'app-movie',
-  templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+    selector: 'app-movie',
+    templateUrl: './movie.component.html',
+    styleUrls: ['./movie.component.css'],
+    standalone: false
 })
 export class MovieComponent implements OnInit {
   movie: Movie;

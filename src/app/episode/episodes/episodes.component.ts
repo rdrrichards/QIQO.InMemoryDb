@@ -3,9 +3,10 @@ import { EpisodeService } from 'src/app/shared/episode.service';
 import { Episode } from 'src/app/model/episode';
 
 @Component({
-  selector: 'app-episodes',
-  templateUrl: './episodes.component.html',
-  styleUrls: ['./episodes.component.css']
+    selector: 'app-episodes',
+    templateUrl: './episodes.component.html',
+    styleUrls: ['./episodes.component.css'],
+    standalone: false
 })
 export class EpisodesComponent implements OnInit {
   episodes: Episode[] = [];

@@ -3,9 +3,10 @@ import { SpellService } from 'src/app/shared/spell.service';
 import { Spell } from 'src/app/model/spell';
 
 @Component({
-  selector: 'app-spells',
-  templateUrl: './spells.component.html',
-  styleUrls: ['./spells.component.css']
+    selector: 'app-spells',
+    templateUrl: './spells.component.html',
+    styleUrls: ['./spells.component.css'],
+    standalone: false
 })
 export class SpellsComponent implements OnInit {
   spells: Spell[];

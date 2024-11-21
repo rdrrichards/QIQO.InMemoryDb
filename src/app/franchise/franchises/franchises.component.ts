@@ -3,9 +3,10 @@ import { FranchiseService } from 'src/app/shared/franchise.service';
 import { Franchise } from 'src/app/model/franchise';
 
 @Component({
-  selector: 'app-franchises',
-  templateUrl: './franchises.component.html',
-  styleUrls: ['./franchises.component.css']
+    selector: 'app-franchises',
+    templateUrl: './franchises.component.html',
+    styleUrls: ['./franchises.component.css'],
+    standalone: false
 })
 export class FranchisesComponent implements OnInit {
   franchises: Franchise[] = [];

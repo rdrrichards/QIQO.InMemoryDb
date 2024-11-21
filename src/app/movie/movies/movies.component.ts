@@ -3,9 +3,10 @@ import { Movie } from 'src/app/model/movie';
 import { MovieService } from 'src/app/shared/movie.service';
 
 @Component({
-  selector: 'app-movies',
-  templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css']
+    selector: 'app-movies',
+    templateUrl: './movies.component.html',
+    styleUrls: ['./movies.component.css'],
+    standalone: false
 })
 export class MoviesComponent implements OnInit {
   movies: Movie[] = [];
