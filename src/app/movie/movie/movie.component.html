@@ -1,5 +1,7 @@
-<div *ngIf="movie">
-  <h1>
-    {{movie.name}}
-  </h1>
-</div>
+@if (movie) {
+  <div>
+    <h1>
+      {{movie.name}}
+    </h1>
+  </div>
+}

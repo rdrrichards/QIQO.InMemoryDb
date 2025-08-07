@@ -1,12 +1,20 @@
-<div *ngIf="series.length > 0">
-  <div *ngFor="let ser of series">
-    {{ser.id}} {{ser.name}} <a (click)="viewEpisodes(ser.id)">View</a>
-    <ol *ngIf="show">
-      <li *ngFor="let epi of ser.episodes" >
-        {{epi.name}}
-      </li>
-    </ol>
+@if (series.length > 0) {
+  <div>
+    @for (ser of series; track ser) {
+      <div>
+        {{ser.id}} {{ser.name}} <a (click)="viewEpisodes(ser.id)">View</a>
+        @if (show) {
+          <ol>
+            @for (epi of ser.episodes; track epi) {
+              <li >
+                {{epi.name}}
+              </li>
+            }
+          </ol>
+        }
+      </div>
+    }
   </div>
-</div>
+}
 
 <!-- {{ series | json }} -->

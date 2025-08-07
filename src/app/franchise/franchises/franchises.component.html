@@ -1,10 +1,18 @@
-<div *ngIf="franchises.length > 0">
-  <div *ngFor="let franchise of franchises">
-    {{franchise.id}} {{franchise.name}} <a (click)="viewMovies(franchise.id)">View</a>
-    <ol *ngIf="show[franchise.id - 1]">
-      <li *ngFor="let movie of franchise.movies" >
-        {{movie.name}}
-      </li>
-    </ol>
+@if (franchises.length > 0) {
+  <div>
+    @for (franchise of franchises; track franchise) {
+      <div>
+        {{franchise.id}} {{franchise.name}} <a (click)="viewMovies(franchise.id)">View</a>
+        @if (show[franchise.id - 1]) {
+          <ol>
+            @for (movie of franchise.movies; track movie) {
+              <li >
+                {{movie.name}}
+              </li>
+            }
+          </ol>
+        }
+      </div>
+    }
   </div>
-</div>
+}

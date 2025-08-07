@@ -1,5 +1,9 @@
-<div *ngIf="episodes.length > 0">
-  <div *ngFor="let episode of episodes">
-    {{episode.id}} {{episode.name}} <a [routerLink]="['/episodes', episode.id]">View</a>
+@if (episodes.length > 0) {
+  <div>
+    @for (episode of episodes; track episode) {
+      <div>
+        {{episode.id}} {{episode.name}} <a [routerLink]="['/episodes', episode.id]">View</a>
+      </div>
+    }
   </div>
-</div>
+}
